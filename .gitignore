@@ -5,5 +5,4 @@ firestore-debug.log
 ui-debug.log
 
 # IDE settings
-.idx/
 .vscode/
