@@ -3,12 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>Modern Web App</title>
   <link href='/style.css' rel='stylesheet'>
+  <script type="text/javascript">
+    // Inline script to prevent theme flash
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', initialTheme);
+  </script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <main class="card">
+    <h1>Hello, World!</h1>
+    <p>Experience the modern web with system-aware dark and light modes.</p>
+    <button id="themeToggle" class="theme-toggle">
+      Switch to <span id="themeLabel">Dark</span> Mode
+    </button>
+  </main>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
