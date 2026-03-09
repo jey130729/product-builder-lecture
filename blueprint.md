@@ -1,29 +1,31 @@
-# Blueprint: Theme Toggle Support (Dark/Light Mode)
+# Blueprint: Modern Web App with Partnership Inquiry
 
 ## Overview
-This project is a simple web application designed to demonstrate modern web standards. This update adds a system-aware and user-togglable Dark/Light mode functionality, enhancing usability and visual appeal.
+This project is a modern, responsive web application demonstrating advanced CSS techniques and interactive components. It includes a system-aware dark/light mode and a functional partnership inquiry form integrated with Formspree.
 
 ## Current Project Features
 - **Modern HTML Structure:** Minimal and clean base.
+- **Dark/Light Mode:** System-aware and user-togglable theme using CSS variables and `oklch` colors.
 - **External CSS/JS:** Modularized styling and logic.
-- **Git Integration:** Version control and automated deployment ready.
+- **Partnership Inquiry Form:** A functional contact form for business inquiries.
 
-## Plan: Add Dark/Light Mode
-1. **Define CSS Variables:**
-   - Use `:root` for light theme defaults (background, text, accent colors).
-   - Use `[data-theme='dark']` to override variables for dark mode.
-   - Use `oklch` for modern, perceptually uniform colors.
-2. **Implement Toggle UI:**
-   - Add a visually appealing toggle button in `index.html`.
-   - Use modern CSS (e.g., `:has()`, Container Queries if applicable) for styling.
-3. **Develop Logic in `main.js`:**
-   - Detect system theme preference initially.
-   - Handle button click to switch themes.
-   - Persist user preference in `localStorage`.
-4. **Validation & Deployment:**
-   - Verify visual consistency across themes.
-   - Commit and push changes to trigger deployment.
+## Plan: Add Partnership Inquiry Form
+1. **Design the Form UI:**
+   - Create a new section/card for the "Partnership Inquiry" form in `index.html`.
+   - Fields: `name`, `email`, `subject`, `message`.
+   - Use the Formspree endpoint: `https://formspree.io/f/xkovdvnv`.
+2. **Style the Form (CSS):**
+   - Apply modern styling using Cascade Layers.
+   - Ensure input fields are responsive and themed (dark/light mode).
+   - Add focus effects and hover transitions for a premium feel.
+3. **Enhance with JavaScript:**
+   - Implement AJAX submission using the `fetch` API to provide immediate feedback without page reloads.
+   - Show success/error messages within the UI.
+4. **Validation:**
+   - Ensure all required fields are validated.
+   - Verify the form works in both dark and light modes.
 
 ## Technical Details
-- **CSS Baseline:** Cascade Layers, Logical Properties, Modern Color Spaces (`oklch`).
-- **JS Features:** ES Modules, `localStorage`, `matchMedia`.
+- **CSS Baseline:** Cascade Layers, Logical Properties, Modern Color Spaces (`oklch`), Container Queries.
+- **JS Features:** ES Modules, `fetch` API, `localStorage`, `matchMedia`.
+- **Integration:** Formspree for backend-less form handling.
